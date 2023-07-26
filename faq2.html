@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> FAQ </title>
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+
+* {
+	box-sizing: border-box;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	color: white;
+}
+
+body {
+	background-color: gray;
+	margin: 0;
+	position: relative;
+	background-image: url('home.jpg');
+	background-size: 150% 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.navi {
+	width: 100%;
+	height: 1000px;
+	padding: 30px 50px;
+	background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9));
+	position: relative;
+}
+
+.logo {
+	width: 180px;
+	height: 50px;
+}
+
+/*----------------------------------------------------------------------------- */
+
+.one {
+	width: 100%;
+	height: 1000px;
+}
+
+.top, .about {
+	float: left;
+	width: 100%;
+}
+
+.about {
+	padding: 0px 60px;
+	margin-top: 20px;
+}
+
+.tag {
+	font-size: 30px;
+	font-weight: bold;
+	color: dimgray;      
+}
+
+.note {
+	font-size: 17px;
+	color: dimgray;      	
+}
+
+.back {
+	color: #F4A950;
+	background-color: #161B21;
+	border: 1px solid #161B21;
+	width: 30px;
+	height: 50px;
+	margin: 0px 0px;
+	margin-right: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 3.5px;
+	float: left;
+	cursor: pointer;
+}
+
+.back:hover {
+	color: #d68d33;
+}
+
+
+.netflix {
+	color: #161B21;
+	width: 85px;
+	height: 50px;
+	font-size: 7px;
+	position: absolute;
+	bottom: 0;
+}
+
+.netflix img {
+	width: 80px;
+	height: 25px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.footer {
+	overflow: hidden;
+	background-color: #161B21;
+	width: 100%;
+	height: 200px;
+	padding: 30px 30px;
+	background: rgba(0,0,0,.9);
+	text-align: center;
+}
+
+.footer a { 
+	color: gray;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: #F4A950;
+}
+
+.desc {
+	color: black;
+	font-size: 18px;
+}
+
+.l, .c, .r {
+	margin: 40px auto;
+}
+
+.l { 
+	width: 40%;
+	height: 100%;
+	float: left;
+	text-align: right;
+}
+
+.c { 
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+.r { 
+	width: 40%;
+	height: 100%;
+	float: left;
+	text-align: left;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 800px) {
+	.navi {
+	height: 1100px;
+	padding: 15px 30px;
+	}
+
+	.one {
+	height: 1100px;
+	}
+
+	body {
+	background-size: 300% 100%;
+	}
+
+	.netflix {
+	margin: 0px 39%;
+	text-align: center;
+	}
+
+	.desc {
+	font-size: 15px;
+	}
+
+	.l, .r { 
+	width: 37.5%;
+	}
+
+	.c { 
+	width: 25%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.navi {
+	height: 1100px;
+	padding: 15px 30px;
+	}
+
+	.one {
+	height: 1100px;
+	}
+
+	body {
+	background-size: 200% 40%;
+	}
+
+	.back {
+	width: 10%;
+	height: 70px;
+	}
+
+	.logo {
+	width: 86%;
+	height: 80px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	}
+
+	.about {
+	padding: 0px;
+	text-align: center;
+	}
+	
+	.tag {
+	font-size: 20px;
+	}
+
+	.note {
+	font-size: 15px;
+	}
+
+	.netflix {
+	margin: 0px 29%;
+	}
+
+	.l, .r { 
+	width: 25%;
+	}
+
+	.c { 
+	width: 50%;
+	}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="row">
+<div class="one">
+	<div class="navi">
+		<div class="top">
+			<button type="button" onclick="back()" class="back"> &#x25C4 </button>
+			<a href="cinema2.html">
+			<img class="logo" src="goldflix.png">
+			</a>
+		</div>
+
+		<div class="about">
+			<p class="tag"> | What is Goldflix? </p>
+			<p class="note"> Goldflix &#9400; is a streaming service that allows our members to watch a wide variety of award-winning TV shows, movies, 
+documentaries, and more on thousand of internet-connected devices. Powered by Netflix, Enjoy countless films at your screen, anytime and anywhere.</p>
+		</div>
+
+		<div class="about">
+			<p class="tag"> | How much does Goldflix cost? </p>
+			<p class="note"> Watch Goldflix on your smartphone, tablet, smart TV, laptop, or streaming device, all for one low fixed monthly fee. Plans start from &#8369 149 a month. No extra cost or contracts. </p>
+		</div>
+
+		<div class="about">
+			<p class="tag"> | Where can I watch?  </p>
+			<p class="note"> Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Goldflix account to watch instantly on the web at goldflix.com from your personal computer or on any internet-connected device that offers the Goldflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. </p>
+		</div>
+
+		<div class="about">
+			<p class="tag"> | What can I watch on Goldflix?  </p>
+			<p class="note"> Goldflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning originals, and more. Watch as much as you want, anytime you want. </p>
+		</div>
+		
+		<div class="netflix">
+			POWERED BY
+			<img src="netflix.png">
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="footer">
+<div class="l">
+<a href="account.html"> Account </a>
+</div>
+<div class="c">
+<a href="aboutus2.html"> About Us </a>
+<br> <br>
+<p class="desc" style="color:#F4A950"> All Rights Reserved 2019 </p>
+</div>
+<div class="r">
+<a href="#"> FAQ </a>
+</div>
+</div>
+
+<script>
+
+function back() {
+
+	window.history.back();
+
+}
+
+</script>
+
+</body>
+</html>

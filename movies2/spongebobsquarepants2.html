@@ -1,0 +1,107 @@
+<!DOCTYPE html">
+<html>
+<head>
+
+<title> SpongeBob SquarePants | Goldflix </title>
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../movie2.css">
+
+</head>
+
+<body>
+
+<div id="screen" onclick="x()" class="screen">
+<img src="../loading.gif">
+</div>
+
+<div class="navi">
+<img class="logo" src="../goldflix.png">
+	<div tabindex="0" id="f" class="drop">
+		<input type="button" onclick="drop()" class="dropper">
+			<img src="../account.png" class="me">
+			<div class="acc"> Attitude Sam </div>
+		</input>
+		<div id="content" class="content">
+  			<a href="../account.html" class="in"> Profile </a>
+			<a href="../aboutus2.html" class="in"> About Us </a>
+			<a href="../faq2.html" class="in"> FAQ </a>
+			<a href="../home.html" class="out"> Sign Out</a>
+		</div>
+	</div>
+</div>
+
+<div class="body">
+
+<br>
+
+<div class="row">
+
+	<div class="left">
+		<div class="card">
+			<img class="poster" src="../posters/spongebob2.jpg" />
+    		</div>
+	</div>
+
+	<div class="right">
+		<div class="card">
+			<p class="title"> SpongeBob SquarePants </p>
+			<p class="description"> The misadventures of talking sea sponge who works at a fast food restaurant, attends a boating school, and lives in an underwater pineapple. </p>
+    			<p class="year"> <i> Animation / Comedy | 1999 </i> </p>
+
+			<div class="watch">
+				<a href="#" onclick="screen()" class="play"> PLAY NOW &#x25BA </a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div class="footer">
+<div class="l">
+<a href="../account.html"> Account </a>
+</div>
+<div class="c">
+<a href="../aboutus2.html"> About Us </a>
+<br> <br>
+<p class="desc" style="color:#F4A950"> All Rights Reserved 2019 </p>
+</div>
+<div class="r">
+<a href="../faq2.html"> FAQ </a>
+</div>
+</div>
+
+<script>
+
+function screen() {
+	document.getElementById("screen").style.display = "block";
+}
+
+function x() {
+	document.getElementById("screen").style.display = "none";
+}
+
+function drop() {
+	document.getElementById("content").classList.toggle("show");
+	document.getElementById('f').focus();
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropper')) {
+    var dropdowns = document.getElementsByClassName("content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Account </title>
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+
+* {
+	box-sizing: border-box;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	color: white;
+}
+
+body {
+	background-color: gray;
+	margin: 0;
+	position: relative;
+	background-image: url('home.jpg');
+	background-size: 100% 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.navi {
+	overflow: hidden;
+	width: 100%;
+	height: 660px;
+	padding: 30px 50px;
+	background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9));
+	position: relative;
+}
+
+.logo {
+	float: left;
+	width: 180px;
+	height: 50px;
+}
+
+/*----------------------------------------------------------------------------- */
+
+.one {
+	width: 100%;
+	height: 660px;
+}
+
+.desc {
+	font-size: 18px;
+}
+
+.card {
+	width: 450px;
+	height: 490px;
+	padding: 30px 70px;
+	margin: 60px auto;
+	background: rgba(0,0,0,.8);
+	border-radius: 5;
+	text-align: center;
+	position: relative;
+}
+
+.me {
+	width: 100%px;
+	height: 250px;
+}
+
+.name {
+	width: 100%;
+	font-size: 32px;
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+.number {
+	font-size: 11px;
+	font-weight: bold;
+	margin-top: 5px;
+	color: gray;
+}
+
+.sign {
+	background-color: #e01f1f;
+	border: 1px solid #e01f1f;
+	width: 81%;
+	padding: 15px 0px;
+	margin: 50px 0px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 3.5px;
+	float: left;
+}
+
+.sign:hover {
+	background-color: #c40e0e;
+}
+
+.back {
+	color: gray;
+	background-color: #161B21;
+	border: 1px solid #e01f1f;
+	width: 15%;
+	padding: 15px 0px;
+	margin: 50px 0px;
+	margin-right: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 3.5px;
+	float: left;
+	cursor: pointer;
+}
+
+.back:hover {
+	background-color: rgb(20,20,20);
+}
+
+.netflix {
+	color: #161B21;
+	width: 85px;
+	height: 50px;
+	font-size: 7px;
+	position: absolute;
+	bottom: 0;
+}
+
+.netflix img {
+	width: 80px;
+	height: 25px;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+.footer {
+	overflow: hidden;
+	background-color: #161B21;
+	width: 100%;
+	height: 200px;
+	padding: 30px 30px;
+	background: rgba(0,0,0,.9);
+	text-align: center;
+}
+
+.footer a { 
+	color: gray;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: #F4A950;
+}
+
+.l, .c, .r {
+	margin: 40px auto;
+}
+
+.l { 
+	width: 40%;
+	height: 100%;
+	float: left;
+	text-align: right;
+}
+
+.c { 
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+.r { 
+	width: 40%;
+	height: 100%;
+	float: left;
+	text-align: left;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 800px) {
+	.navi {
+	height: 660px;
+	padding: 15px 30px;
+	}
+
+	.logo {
+	margin-left: 215px;
+	}
+
+	body {
+	background-size: 200% 100%;
+	}
+
+	.netflix {
+	margin: 0px 39%;
+	text-align: center;
+	}
+
+	.desc {
+	font-size: 15px;
+	}
+
+	.l, .r { 
+	width: 37.5%;
+	}
+
+	.c { 
+	width: 25%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.navi {
+	padding: 15px 30px;
+	}
+
+	.logo {
+	width: 100%;
+	height: 80px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	}
+
+	.card {
+	width: 100%;
+	height: 430px;
+	padding: 10px 30px;
+	margin: 120px auto;
+	}
+
+	.me {
+	height: 210px;
+	}
+
+	.card p {
+	font-size: 32px;
+	font-weight: bold;
+	}
+
+	.back {
+	width: 20%;
+	}
+
+	.sign {
+	width: 75%;
+	font-size: 15px;
+	}
+
+	.netflix {
+	margin: 0px 29%;
+	}
+
+	body {
+	background-size: 400% 100%;
+	}
+
+	.l, .r { 
+	width: 25%;
+	}
+
+	.c { 
+	width: 50%;
+	}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="row">
+<div class="one">
+	<div class="navi">
+	<a href="cinema2.html">
+	<img class="logo" src="goldflix.png">
+	</a>
+
+		<div class="card">
+		<form>
+			<img src="account.png" class="me">
+			<div class="name"> Attitude Sam </div>
+			<div class="number"> Account No: GOLD-VN-0890-5024 </div>
+			<button type="button" onclick="back()" class="back"> &#x25C4 </button>
+			<a href="home.html" class="sign"> Sign Out </a>
+		</form>
+		</div>
+
+		<div class="netflix">
+			POWERED BY
+			<img src="netflix.png">
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="footer">
+<div class="l">
+<a href="#"> Account </a>
+</div>
+<div class="c">
+<a href="aboutus2.html"> About Us </a>
+<br> <br>
+<p class="desc" style="color:#F4A950"> All Rights Reserved 2019 </p>
+</div>
+<div class="r">
+<a href="faq2.html"> FAQ </a>
+</div>
+</div>
+
+<script>
+
+function back() {
+
+	window.history.back();
+
+}
+
+</script>
+
+</body>
+</html>

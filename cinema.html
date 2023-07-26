@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Goldflix Cinemax </title>
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" id="cinema">
+<link rel="icon" href="favicon.ico" type="image/x-icon" id="cinema">
+
+<style>
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	background-color: #161B21;
+	color: white;
+	margin: 0;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer a:hover, .card a:hover {
+	color: #F4A950;
+}
+
+.navi {
+	overflow: hidden;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 60px;
+	padding: 10px 50px;
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.8);
+	position: fixed;
+	top: 0;
+}
+
+.logo {
+	float: left;
+	width: 160px;
+	height: 40px;
+}
+
+.search {
+	float: left;
+	font-size: 13px;
+	padding: 8px 5px;
+	margin: 3px 0px;
+	margin-left: 20px;
+	width: 440px;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+i {
+	float: left;
+	color: dimgray;
+	font-size: 13px;
+	padding: 8px 0px;
+	margin: 3px 5px;
+}
+
+a.join, a.sign {
+	float: right;
+	font-size: 13px;
+	text-align: center;
+	padding: 8px 15px;
+	margin: 3px 5px;
+	border-radius: 3px;
+	text-decoration: none;
+}
+
+.join {
+	background-color: #F4A950;
+	border: 1px solid #F4A950;
+}
+
+.join:hover {
+	background-color: #d68d33;
+}
+
+.sign {
+	border: 1px solid gray;
+}
+
+.sign:hover {
+	background-color: rgba(0,0,0,0.5);
+	color: #F4A950;
+}
+
+.body {
+	padding: 0px 50px;
+	margin-top: 60px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.box {
+	float: left;
+	width: 50%;
+}
+
+.category {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.title {
+	font-size: 15.9px;
+}
+
+.column {
+	float: left;
+	width: 11.7%;
+    	margin: 0px .4%;
+}
+
+.card {
+	height: 270px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.poster {
+	width: 100%;
+	height: 220px;
+	margin-bottom: 3px;
+	background-image: url('poster.png');
+	background-size: contain;
+}
+
+.desc {
+	font-size: 18px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.footer {
+	overflow: hidden;
+	background-color: #161B21;
+	width: 100%;
+	height: 120px;
+	padding: 30px 30px;
+	margin-top: 100px;
+	text-align: center;
+}
+
+.footer a { 
+	color: gray;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.l { 
+	width: 40%;
+	height: 100%;
+	float: left;
+	text-align: right;
+}
+
+.c { 
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+.r { 
+	width: 40%;
+	height: 100%;
+	float: left;
+	text-align: left;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 800px) {
+	.column {
+	width: 24%;
+    	margin: 0px .5%;
+	text-align: center;
+	}
+
+	.search {
+	width: 190px;
+	margin-left: 10px;
+	}
+
+	i {
+	display: none;
+	}
+
+	.box {
+	width: 100%;
+	}
+
+	.title {
+	font-size: 13px;
+	}
+
+	.category {
+	font-size: 20px;
+	}
+
+	.card {
+	height: 245px;
+	}
+
+	.poster {
+	width: 100%;
+	height: 200px;
+	}
+
+	.desc {
+	font-size: 15px;
+	}
+
+	.l, .r { 
+	width: 37.5%;
+	}
+
+	.c { 
+	width: 25%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.navi {
+	height: 190px;
+	padding: 15px 30px;
+	}
+
+	.body {
+	margin-top: 190px;
+	padding: 0px 30px;
+	}
+
+	.join, .sign {
+	float: right;
+	width: 46.5%;
+	padding: 8px 39.5px;
+	}
+
+	.search {
+	width: 97%;
+	margin: 3px 5px;
+	}
+
+	.column {
+	width: 47%;
+    	margin: 0px 1.5%;
+	}
+
+	.card {
+	height: 255px;
+	}
+
+	.poster {
+	height: 210px;
+	}
+
+	.logo {
+	width: 100%;
+	height: 80px;
+	margin-bottom: 5px;
+	}
+
+	.l, .r { 
+	width: 25%;
+	}
+
+	.c { 
+	width: 50%;
+	}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navi">
+<a href="home.html">
+<img class="logo" src="goldflix.png">
+</a>
+<input class="search" type="text" placeholder="Search" size="20">
+<i>(prototype only) </i>
+<a href="signin.html" class="sign"> SIGN IN </a>
+<a href="signup.html" class="join"> JOIN NOW </a>
+</div>
+
+<div class="body">
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Animation <p>
+	<p class="desc"> Animated films grown more artful and affecting with studios and indies alike creating stop-motion marvels, hand-drawn standouts, and CGI spectacles. <p>
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/adventuretime.html">
+		<img class="poster" src="posters/adventuretime.png" /> <span  class="title"> Adventure Time </span>
+		</a>
+    	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/baki.html">
+		<img class="poster" src="posters/baki.jpg" /> <span  class="title"> Baki </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/castlevania.html">
+		<img class="poster" src="posters/castlevania.jpg" /> <span  class="title"> Castlevania </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/coraline.html">
+		<img class="poster" src="posters/coraline.jpg" /> <span  class="title"> Coraline </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/fairytail.html">
+		<img class="poster" src="posters/fairytail.jpg" /> <span  class="title"> Fairy Tail </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/frozen.html">
+		<img class="poster" src="posters/frozen.jpg" /> <span  class="title"> Frozen </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/fullmetalalchemist.html">
+		<img class="poster" src="posters/fullmetal.jpg" /> <span  class="title"> Full Metal Alchemist: Brotherhood </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/gravityfalls.html">
+		<img class="poster" src="posters/gravityfalls.jpg" /> <span  class="title"> Gravity Falls </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/hunterxhunter.html">
+		<img class="poster" src="posters/hunter.jpg" /> <span  class="title"> Hunter X Hunter </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/klaus.html">
+		<img class="poster" src="posters/klaus.jpg" /> <span  class="title"> Klaus </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/mulan.html">
+		<img class="poster" src="posters/mulan.jpg" /> <span  class="title"> Mulan </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/myneighbortotoro.html">
+		<img class="poster" src="posters/myneighbortotoro.jpg" /> <span  class="title"> My Neighbor Totoro </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/redshoesandthesevendwarfs.html">
+		<img class="poster" src="posters/redshoes.jpg" /> <span  class="title"> Red Shoes and the Seven Dwarfs </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/rickandmorty.html">
+		<img class="poster" src="posters/rickandmorty.jpg" /> <span  class="title"> Rick and Morty </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/spiderman.html">
+		<img class="poster" src="posters/spiderman.jpg" /> <span  class="title"> Spider-man: Into The Spider-verse </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/spiesindisguise.html">
+		<img class="poster" src="posters/spies.jpg" /> <span  class="title"> Spies in Disguise </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/spongebobsquarepants.html">
+		<img class="poster" src="posters/spongebob.jpeg" /> <span  class="title"> SpongeBob SquarePants </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/stevenuniverse.html">
+		<img class="poster" src="posters/stevenuniverse.jpg" /> <span  class="title"> Steven Universe: The Movie </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/swordartonline.html">
+		<img class="poster" src="posters/swordartonline.jpg" /> <span  class="title"> Sword Art Online </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/tangled.html">
+		<img class="poster" src="posters/tangled.jpg" /> <span  class="title"> Tangled </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/tokyoghoul.html">
+		<img class="poster" src="posters/tokyo.jpg" /> <span  class="title"> Tokyo Ghoul </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/weatheringwithyou.html">
+		<img class="poster" src="posters/weatheringwithyou.jpg" /> <span  class="title"> Weathering With You </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/yourname.html">
+		<img class="poster" src="posters/yourname.jpg" /> <span  class="title"> Your Name </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/zootopia.html">
+		<img class="poster" src="posters/zootopia.jpg" /> <span  class="title"> Zootopia </span>
+    		</a>
+	</div>
+    </div>
+
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Comedy <p>
+	<p class="desc"> Comedy comes in many forms. Romantic comedies, action comedies, black comedies -- we've got all the best movies that will tickle your funny bone. <p>
+
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/3idiots.html">
+		<img class="poster" src="posters/3idiots.jpeg" /> <span  class="title"> 3 Idiots </span>
+		</a>
+    	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/blockers.html">
+		<img class="poster" src="posters/blockers.jpg" /> <span  class="title"> Blockers </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/jowable.html">
+		<img class="poster" src="posters/jowable.jpg" /> <span  class="title"> #Jowable </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/kissingbooth.html">
+		<img class="poster" src="posters/kissingbooth.jpg" /> <span  class="title"> Kissing Booth </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/midnightrunners.html">
+		<img class="poster" src="posters/midnight.jpg" /> <span  class="title"> Midnight Runners </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/rickandmorty.html">
+		<img class="poster" src="posters/rickandmorty.jpg" /> <span  class="title"> Rick and Morty </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/themask.html">
+		<img class="poster" src="posters/mask.jpg" /> <span  class="title"> The Mask </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/whitechicks.html">
+		<img class="poster" src="posters/whitechicks.jpg" /> <span  class="title"> White Chicks </span>
+    		</a>
+	</div>
+    </div>
+
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Horror <p>
+	<p class="desc"> Vampires. Zombies. Ghosts. Oh my. How do you make horror movies even more terrifying? By watching them at home in the dark. <p>
+
+	</div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/47metersdown.html">
+		<img class="poster" src="posters/47meters.jpg" /> <span  class="title"> 47 Meters Down </span>
+		</a>
+    	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/aquietplace.html">
+		<img class="poster" src="posters/quietplace.jpg" /> <span  class="title"> A Quiet Place </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/annihilation.html">
+		<img class="poster" src="posters/annihilation.jpg" /> <span  class="title"> Annihilation </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/birdbox.html">
+		<img class="poster" src="posters/birdbox.jpg" /> <span  class="title"> Bird Box </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/castlevania.html">
+		<img class="poster" src="posters/castlevania.jpg" /> <span  class="title"> Castlevania </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/coraline.html">
+		<img class="poster" src="posters/coraline.jpg" /> <span  class="title"> Coraline </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/countdown.html">
+		<img class="poster" src="posters/countdown.jpg" /> <span  class="title"> Countdown </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/getout.html">
+		<img class="poster" src="posters/getout.jpg" /> <span  class="title"> Get Out </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/hereditary.html">
+		<img class="poster" src="posters/hereditary.jpg" /> <span  class="title"> Hereditary </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/iamlegend.html">
+		<img class="poster" src="posters/iamlegend.jpg" /> <span  class="title"> I Am Legend </span>
+		</a>
+    	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/it.html">
+		<img class="poster" src="posters/it.jpg" /> <span  class="title"> IT </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/petsematary.html">
+		<img class="poster" src="posters/petsematary.jpg" /> <span  class="title"> Pet Sematary </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/theconjuring.html">
+		<img class="poster" src="posters/conjuring.jpg" /> <span  class="title"> The Conjuring </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/theshining.html">
+		<img class="poster" src="posters/shining.jpg" /> <span  class="title"> The Shining </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/tokyoghoul.html">
+		<img class="poster" src="posters/tokyo.jpg" /> <span  class="title"> Tokyo Ghoul </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/worldwarz.html">
+		<img class="poster" src="posters/wwz.jpg" /> <span  class="title"> World War Z </span>
+    		</a>
+	</div>
+    </div>
+    
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Romance <p>
+	<p class="desc"> Can you feel the love tonight? You better believe it. From deep love stories to light RomComs, these romantic movies are ready and waiting. <p>
+
+	</div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/awalktoremember.html">
+		<img class="poster" src="posters/awalk.jpg" /> <span  class="title"> A Walk to Remember </span>
+		</a>
+    	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/allthebrightplaces.html">
+		<img class="poster" src="posters/allthebright.jpg" /> <span  class="title"> All The Bright Places </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/alonetogether.html">
+		<img class="poster" src="posters/alonetogether.jpg" /> <span  class="title"> Alone Together </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/dearjohn.html">
+		<img class="poster" src="posters/dearjohn.jpg" /> <span  class="title"> Dear John </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/fiftyshadesofgrey.html">
+		<img class="poster" src="posters/fiftyshadesofgrey.jpg" /> <span  class="title"> Fifty Shades of Grey </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/hellolovegoodbye.html">
+		<img class="poster" src="posters/hellolove.jpg" /> <span  class="title"> Hello, Love, Goodbye </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/kissingbooth.html">
+		<img class="poster" src="posters/kissingbooth.jpg" /> <span  class="title"> Kissing Booth </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/lalaland.html">
+		<img class="poster" src="posters/lalaland.jpg" /> <span  class="title"> La La Land </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/loverosie.html">
+		<img class="poster" src="posters/loverosie.jpg" /> <span  class="title"> Love, Rosie </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/midnightsun.html">
+		<img class="poster" src="posters/midnightsun.jpg" /> <span  class="title"> Midnight Sun </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/nostringsattached.html">
+		<img class="poster" src="posters/nostrings.jpg" /> <span  class="title"> No Strings Attached </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/open.html">
+		<img class="poster" src="posters/open.jpg" /> <span  class="title"> Open </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/thespacebetweenus.html">
+		<img class="poster" src="posters/spacebetween.jpg" /> <span  class="title"> The Space Between Us </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/thehowsofus.html">
+		<img class="poster" src="posters/thehows.jpg" /> <span  class="title"> The Hows of Us </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/thenotebook.html">
+		<img class="poster" src="posters/notebook.jpg" /> <span  class="title"> The Notebook </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/weatheringwithyou.html">
+		<img class="poster" src="posters/weatheringwithyou.jpg" /> <span  class="title"> Weathering With You </span>
+		</a>
+    	</div>
+    </div>
+    
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Musical <p>
+	<p class="desc"> From the best movie musicals to amazing documentaries to classic concert films, these shows and films will keep adults and kids alike in rhythm. <p>
+
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/3idiots.html">
+		<img class="poster" src="posters/3idiots.jpeg" /> <span  class="title"> 3 Idiots </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/aladdin.html">
+		<img class="poster" src="posters/aladdin.jpg" /> <span  class="title"> Aladdin </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/frozen.html">
+		<img class="poster" src="posters/frozen.jpg" /> <span  class="title"> Frozen </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/lalaland.html">
+		<img class="poster" src="posters/lalaland.jpg" /> <span  class="title"> La La Land </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/missgranny.html">
+		<img class="poster" src="posters/missgranny.jpg" /> <span  class="title"> Miss Granny </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/mulan.html">
+		<img class="poster" src="posters/mulan.jpg" /> <span  class="title"> Mulan </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/stevenuniverse.html">
+		<img class="poster" src="posters/stevenuniverse.jpg" /> <span  class="title"> Steven Universe: The Movie </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+		<div class="card">
+		<a href="movies/thegreatestshowman.html">
+		<img class="poster" src="posters/greatestshowman.jpg" /> <span  class="title"> The Greatest Showman </span>
+    		</a>
+	</div>
+    </div>
+    
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Action <p>
+	<p class="desc"> Aliens, robots, gangsters, criminals, disasters, war and some pretty fast cars-these movies all make for one amped-up viewing experience. <p>
+
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/fullmetalalchemist.html">
+		<img class="poster" src="posters/fullmetal.jpg" /> <span  class="title"> Full Metal Alchemist: Brotherhood </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/johnwick.html">
+		<img class="poster" src="posters/johnwick.jpg" /> <span  class="title"> John Wick </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/kingsman.html">
+		<img class="poster" src="posters/kingsman.jpg" /> <span  class="title"> Kingsman: The Secret Service </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/midnightrunners.html">
+		<img class="poster" src="posters/midnight.jpg" /> <span  class="title"> Midnight Runners </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/prisonbreak.html">
+		<img class="poster" src="posters/prisonbreak.jpg" /> <span  class="title"> Prison Break </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/spenserconfidential.html">
+		<img class="poster" src="posters/spenser.jpg" /> <span  class="title"> Spenser Confidential </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/taken3.html">
+		<img class="poster" src="posters/taken.jpg" /> <span  class="title"> Taken 3 </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+		<div class="card">
+		<a href="movies/worldwarz.html">
+		<img class="poster" src="posters/wwz.jpg" /> <span  class="title"> World War Z </span>
+    		</a>
+	</div>
+    </div>
+    
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Thriller <p>
+	<p class="desc"> Like your movies with a shot of adrenaline? These films are for you. Murders, heists, disasters, noir -- they're all here and packed with suspense. <p>
+
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/47metersdown.html">
+		<img class="poster" src="posters/47meters.jpg" /> <span  class="title"> 47 Meters Down </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/aquietplace.html">
+		<img class="poster" src="posters/quietplace.jpg" /> <span  class="title"> A Quiet Place </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/bodyguard.html">
+		<img class="poster" src="posters/bodyguard.jpg" /> <span  class="title"> Bodyguard </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/breakingbad.html">
+		<img class="poster" src="posters/breakingbad.jpg" /> <span  class="title"> Breaking Bad </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/countdown.html">
+		<img class="poster" src="posters/countdown.jpg" /> <span  class="title"> Countdown </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/getout.html">
+		<img class="poster" src="posters/getout.jpg" /> <span  class="title"> Get Out </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/iamlegend.html">
+		<img class="poster" src="posters/iamlegend.jpg" /> <span  class="title"> I Am Legend </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/it.html">
+		<img class="poster" src="posters/it.jpg" /> <span  class="title"> IT </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/johnwick.html">
+		<img class="poster" src="posters/johnwick.jpg" /> <span  class="title"> John Wick </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/petsematary.html">
+		<img class="poster" src="posters/petsematary.jpg" /> <span  class="title"> Pet Sematary </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/prisonbreak.html">
+		<img class="poster" src="posters/prisonbreak.jpg" /> <span  class="title"> Prison Break </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/readyornot.html">
+		<img class="poster" src="posters/readyornot.jpg" /> <span  class="title"> Ready or Not </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/taken3.html">
+		<img class="poster" src="posters/taken.jpg" /> <span  class="title"> Taken 3 </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/theconjuring.html">
+		<img class="poster" src="posters/conjuring.jpg" /> <span  class="title"> The Conjuring </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/theshining.html">
+		<img class="poster" src="posters/shining.jpg" /> <span  class="title"> The Shining </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+		<div class="card">
+		<a href="movies/worldwarz.html">
+		<img class="poster" src="posters/wwz.jpg" /> <span  class="title"> World War Z </span>
+    		</a>
+	</div>
+    </div>
+
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Sci-Fi <p>
+	<p class="desc"> Aliens. Robots. Superheroes. And even a little romance. Experience the best sci-fi films that Hollywood-and the world at large-have to offer. <p>
+
+	</div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/aquietplace.html">
+		<img class="poster" src="posters/quietplace.jpg" /> <span  class="title"> A Quiet Place </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/annihilation.html">
+		<img class="poster" src="posters/annihilation.jpg" /> <span  class="title"> Annihilation </span>
+		</a>
+    	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/geostorm.html">
+		<img class="poster" src="posters/geostorm.jpg" /> <span  class="title"> Geostorm </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/interstellar.html">
+		<img class="poster" src="posters/interstellar.jpg" /> <span  class="title"> Interstellar </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/kingsman.html">
+		<img class="poster" src="posters/kingsman.jpg" /> <span  class="title"> Kingsman: The Secret Service </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/nowyouseeme.html">
+		<img class="poster" src="posters/nowyou.jpg" /> <span  class="title"> Now You See Me </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/rickandmorty.html">
+		<img class="poster" src="posters/rickandmorty.jpg" /> <span  class="title"> Rick and Morty </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/venom.html">
+		<img class="poster" src="posters/venom.jpg" /> <span  class="title"> Venom </span>
+    		</a>
+	</div>
+    </div>
+    
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Drama <p>
+	<p class="desc"> We all need a little drama in our lives. From gritty crime thrillers to heartfelt romances to riveting real-life stories, these dramatic movies pack a punch. <p>
+
+	</div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/blockers.html">
+		<img class="poster" src="posters/blockers.jpg" /> <span  class="title"> Blockers </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/fiftyshadesofgrey.html">
+		<img class="poster" src="posters/fiftyshadesofgrey.jpg" /> <span  class="title"> Fifty Shades of Grey </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/foursistersandawedding.html">
+		<img class="poster" src="posters/foursisters.jpg" /> <span  class="title"> Four Sisters and A Wedding </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/hellolovegoodbye.html">
+		<img class="poster" src="posters/hellolove.jpg" /> <span  class="title"> Hello, Love, Goodbye </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/hereditary.html">
+		<img class="poster" src="posters/hereditary.jpg" /> <span  class="title"> Hereditary </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/joker.html">
+		<img class="poster" src="posters/joker.jpg" /> <span  class="title"> Joker </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/jowable.html">
+		<img class="poster" src="posters/jowable.jpg" /> <span  class="title"> #Jowable </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/knivesout.html">
+		<img class="poster" src="posters/knivesout.jpg" /> <span  class="title"> Knives Out </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/missgranny.html">
+		<img class="poster" src="posters/missgranny.jpg" /> <span  class="title"> Miss Granny </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/pabloescobar.html">
+		<img class="poster" src="posters/pabloescobar.jpg" /> <span  class="title"> Pablo Escobar </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/parasite.html">
+		<img class="poster" src="posters/parasite.jpg" /> <span  class="title"> Parasite </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/sevensundays.html">
+		<img class="poster" src="posters/sevensundays.jpg" /> <span  class="title"> Seven Sundays </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/theinmate.html">
+		<img class="poster" src="posters/theinmate.jpg" /> <span  class="title"> The Inmate </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/thenotebook.html">
+		<img class="poster" src="posters/notebook.jpg" /> <span  class="title"> The Notebook </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/titanic.html">
+		<img class="poster" src="posters/titanic.jpg" /> <span  class="title"> Titanic </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/you.html">
+		<img class="poster" src="posters/you.png" /> <span class="title"> You </span>
+    		</a>
+	</div>
+    </div>
+    
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Fantasy <p>
+	<p class="desc"> Looking for something with "far-off places, daring sword fights magic spells, a prince in disguise?" Look no further. From family-friendly stories and everything in between, we've got you covered. <p>
+
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/adventuretime.html">
+		<img class="poster" src="posters/adventuretime.png" /> <span  class="title"> Adventure Time </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/aladdin.html">
+		<img class="poster" src="posters/aladdin.jpg" /> <span  class="title"> Aladdin </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/alongwiththegods.html">
+		<img class="poster" src="posters/alongwith.jpg" /> <span  class="title"> Along With The Gods: Two Worlds </span>
+		</a>
+    	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/themask.html">
+		<img class="poster" src="posters/mask.jpg" /> <span  class="title"> The Mask </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/missgranny.html">
+		<img class="poster" src="posters/missgranny.jpg" /> <span  class="title"> Miss Granny </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/myneighbortotoro.html">
+		<img class="poster" src="posters/myneighbortotoro.jpg" /> <span  class="title"> My Neighbor Totoro </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/thewitcher.html">
+		<img class="poster" src="posters/thewitcher.jpg" /> <span  class="title"> The Witcher </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+		<div class="card">
+		<a href="movies/yourname.html">
+		<img class="poster" src="posters/yourname.jpg" /> <span  class="title"> Your Name </span>
+    		</a>
+	</div>
+    </div>
+
+</div>
+
+<div class="row">
+
+	<div class="box">
+
+	<p class="category"> Mystery <p>
+	<p class="desc"> From perplexing psychological puzzles to harrowing whodunits and bewildering narrative brooders, these are the mysteries-a-plentys just begging to be discovered. <p>
+
+	</div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/annihilation.html">
+		<img class="poster" src="posters/annihilation.jpg" /> <span  class="title"> Annihilation </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/birdbox.html">
+		<img class="poster" src="posters/birdbox.jpg" /> <span  class="title"> Bird Box </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/coraline.html">
+		<img class="poster" src="posters/coraline.jpg" /> <span  class="title"> Coraline </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/gravityfalls.html">
+		<img class="poster" src="posters/gravityfalls.jpg" /> <span  class="title"> Gravity Falls </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+	<div class="card">
+		<a href="movies/knivesout.html">
+		<img class="poster" src="posters/knivesout.jpg" /> <span  class="title"> Knives Out </span>
+		</a>
+    	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/narcos.html">
+		<img class="poster" src="posters/narcos.jpg" /> <span  class="title"> Narcos </span>
+    		</a>
+	</div>
+    </div>
+    
+    <div class="column">
+	<div class="card">
+		<a href="movies/pabloescobar.html">
+		<img class="poster" src="posters/pabloescobar.jpg" /> <span  class="title"> Pablo Escobar </span>
+    		</a>
+	</div>
+    </div>
+
+    <div class="column">
+		<div class="card">
+		<a href="movies/zootopia.html">
+		<img class="poster" src="posters/zootopia.jpg" /> <span  class="title"> Zootopia </span>
+    		</a>
+	</div>
+    </div>
+
+</div>
+
+</div>
+
+<div class="footer">
+<div class="l">
+<a href="signin.html"> Account </a>
+</div>
+<div class="c">
+<a href="aboutus.html"> About Us </a>
+<br> <br>
+<p class="desc" style="color:#F4A950"> All Rights Reserved 2019 </p>
+</div>
+<div class="r">
+<a href="faq.html"> FAQ </a>
+</div>
+</div>
+
+
+</body>
+</html>

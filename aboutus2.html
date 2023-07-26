@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> About Us </title>
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+
+* {
+	box-sizing: border-box;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	color: white;
+}
+
+body {
+	background-color: gray;
+	margin: 0;
+	position: relative;
+	background-image: url('home.jpg');
+	background-size: 150% 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.navi {
+	width: 100%;
+	height: 1000px;
+	padding: 30px 50px;
+	background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9));
+	position: relative;
+}
+
+.logo {
+	width: 180px;
+	height: 50px;
+}
+
+/*----------------------------------------------------------------------------- */
+
+.one {
+	width: 100%;
+	height: 1000px;
+}
+
+.dev, .top, .about {
+	float: left;
+	width: 100%;
+}
+
+.about {
+	padding: 0px 60px;
+	margin-top: 20px;
+}
+
+.tag {
+	font-size: 30px;
+	font-weight: bold;
+	color: dimgray;      
+}
+
+.note {
+	font-size: 17px;
+	color: dimgray;      	
+}
+
+.dev {
+	padding: 10px 50px;
+}
+
+.card {
+	float: left;
+	width: 23%;
+	height: 400px;
+	padding: 20px 25px;
+	margin: 0px 10px;
+	background: rgba(0,0,0,.8);
+	border-radius: 5;
+	text-align: center;
+}
+
+.card img {
+	border: 1px solid dimgray;
+	width: 210px;
+	height: 210px;
+}
+
+.nick {
+	background-size: 100% 100%;
+	background-image: url('nick.png');
+}
+
+.nick:hover {
+	background-image: url('nick2.jpg');
+}
+
+.erika {
+	background-size: 100% 100%;
+	background-image: url('erika.png');
+}
+
+.erika:hover {
+	background-image: url('erika2.png');
+}
+
+.bruce {
+	background-size: 100% 100%;
+	background-image: url('bruce.jpg');
+}
+
+.bruce:hover {
+	background-image: url('bruce2.jpg');
+}
+
+.sam {
+	background-size: 100% 100%;
+	background-image: url('sam.jpg');
+}
+
+.sam:hover {
+	background-image: url('sam2.png');
+}
+
+.name {
+	width: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+.number {
+	height: 30px;
+	font-size: 11px;
+	font-weight: bold;
+	margin-top: 5px;
+	color: gray;                               
+}
+
+.sign {
+	float: left;
+	background-color: #e01f1f;
+	border: 1px solid #e01f1f;
+	width: 100%;
+	padding: 10px 0px;
+	margin: 25px 0px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 3.5px;
+	cursor: pointer;
+}
+
+.sign:hover {
+	background-color: #c40e0e;
+}
+
+.back {
+	color: #F4A950;
+	background-color: #161B21;
+	border: 1px solid #161B21;
+	width: 30px;
+	height: 50px;
+	margin: 0px 0px;
+	margin-right: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 3.5px;
+	float: left;
+	cursor: pointer;
+}
+
+.back:hover {
+	color: #d68d33;
+}
+
+
+.netflix {
+	color: #161B21;
+	width: 85px;
+	height: 50px;
+	font-size: 7px;
+	position: absolute;
+	bottom: 0;
+}
+
+.netflix img {
+	width: 80px;
+	height: 25px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.footer {
+	overflow: hidden;
+	background-color: #161B21;
+	width: 100%;
+	height: 200px;
+	padding: 30px 30px;
+	background: rgba(0,0,0,.9);
+	text-align: center;
+}
+
+.footer a { 
+	color: gray;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: #F4A950;
+}
+
+.desc {
+	color: black;
+	font-size: 18px;
+}
+
+.l, .c, .r {
+	margin: 40px auto;
+}
+
+.l { 
+	width: 40%;
+	height: 100%;
+	float: left;
+	text-align: right;
+}
+
+.c { 
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+.r { 
+	width: 40%;
+	height: 100%;
+	float: left;
+	text-align: left;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 800px) {
+	.navi {
+	height: 1400px;
+	padding: 15px 30px;
+	}
+
+	.one {
+	height: 1400px;
+	}
+
+	body {
+	background-size: 300% 100%;
+	}
+
+	.card {
+	width: 46%;
+	height: 360px;
+	margin-bottom: 20px;
+	}
+
+	.card img {
+	width: 100%;
+	height: 180px;
+	}
+
+	.name {
+	font-size: 25px;
+	}
+
+	.netflix {
+	margin: 0px 39%;
+	text-align: center;
+	}
+
+	.desc {
+	font-size: 15px;
+	}
+
+	.l, .r { 
+	width: 37.5%;
+	}
+
+	.c { 
+	width: 25%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.navi {
+	height: 2100px;
+	padding: 15px 30px;
+	}
+
+	.back {
+	width: 10%;
+	height: 70px;
+	}
+
+	.logo {
+	width: 86%;
+	height: 80px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	}
+
+	.one {
+	height: 2100px;
+	}
+
+	body {
+	background-size: 400% 40%;
+	}
+
+	.about, .dev {
+	padding: 0px;
+	text-align: center;
+	}
+
+	.card {
+	width: 93%;
+	height: 360px;
+	margin: 0px 10px;
+	margin-bottom: 20px;
+	}
+
+	.card img {
+	height: 210px;
+	}
+	
+	.tag {
+	font-size: 20px;
+	}
+
+	.note {
+	font-size: 15px;
+	}
+
+	.name {
+	font-size: 20px;
+	}
+
+	.sign {
+	margin: 0px;
+	}
+
+	.netflix {
+	margin: 0px 29%;
+	}
+
+	.l, .r { 
+	width: 25%;
+	}
+
+	.c { 
+	width: 50%;
+	}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="row">
+<div class="one">
+	<div class="navi">
+		<div class="top">
+			<button type="button" onclick="back()" class="back"> &#x25C4 </button>
+			<a href="cinema2.html">
+			<img class="logo" src="goldflix.png">
+			</a>
+		</div>
+
+		<div class="about">
+			<p class="tag"> | About Us </p>
+			<p class="note"> Goldflix &#9400; is a streaming service that allows our members to watch a wide variety of award-winning TV shows, movies, 
+documentaries, and more on thousand of internet-connected devices. </p>
+		</div>
+
+		<div class="about">
+			<p class="tag"> | We the Developers </p>
+		<p class="note"> We have a mission to become the best global entertainment distribution service allowing our subscrivers to watch wide vaiety of award-winning TV shows, movies, documentaries and more on thousands of inter-connected devices. </p>
+		</div>
+
+		<div class="dev">
+			<div class="card">
+				<form>
+				<img class="nick">
+				<div class="name"> Nick </div>
+				<div class="number"> " I want your body Maniga!!!!! " </div>
+				<a class="sign"> Unavailable </a>
+				</form>
+			</div>
+
+			<div class="card">
+				<form>
+				<img class="erika">
+				<div class="name"> Erika </div>
+				<div class="number"> " I won't go another day, without you " </div>
+				<a class="sign"> Unavailable </a>
+				</form>
+			</div>
+
+			<div class="card">
+				<form>
+				<img class="bruce">
+				<div class="name"> Bruce </div>
+				<div class="number"> " Hot dog, hot dog, hot diggety dog Hot dog, hot dog, hot diggety dog " </div>
+				<a class="sign"> Unavailable </a>
+				</form>
+			</div>
+
+			<div class="card">
+				<form>
+				<img class="sam">
+				<div class="name"> Sam </div>
+				<div class="number"> " nakakatawa yun??? keri ba natin today?? " </div>
+				<a class="sign"> Unavailable </a>
+				</form>
+			</div>
+		</div>
+		
+		<div class="netflix">
+			POWERED BY
+			<img src="netflix.png">
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="footer">
+<div class="l">
+<a href="account.html"> Account </a>
+</div>
+<div class="c">
+<a href="#"> About Us </a>
+<br> <br>
+<p class="desc" style="color:#F4A950"> All Rights Reserved 2019 </p>
+</div>
+<div class="r">
+<a href="faq2.html"> FAQ </a>
+</div>
+</div>
+
+<script>
+
+function back() {
+
+	window.history.back();
+
+}
+
+</script>
+
+</body>
+</html>
