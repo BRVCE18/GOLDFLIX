@@ -1,0 +1,35 @@
+
+	= Experience Goldflix =
+
+
+
+
+
+
+ | GOLDFLIX
+
+	Goldflix Ⓒ is a streaming service that allows our members to watch a wide 	variety of award-winning TV shows, movies, documentaries, and more on 	thousand of internet-connected devices. 
+
+	Powered By: Netflix Ⓒ.
+
+
+
+ | DEVELOPERS
+
+	Samantha Antionio
+	Erika Tagacay
+	Romnick Natividad
+	Jericho Rivero
+
+
+
+
+
+ | IMPORTANT!
+
+	~ See [READ ME 2] text document.
+
+
+
+
+

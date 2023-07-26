@@ -1,0 +1,84 @@
+
+	= Experience Goldflix =
+
+
+
+
+
+
+ | WEBPAGES
+
+	Home (start here!)
+	Cinema
+	Movie/s
+	Account
+	About Us
+	FAQ
+	Sign In
+	Sign Up 1 - 3
+
+
+
+ | FEATURES
+
+	Interconnected Webpages
+
+	Supports Mobile + Tablet + Desktop : Try resizing the Browser.
+
+	Animation (Home Page)
+	Pure CSS Interface
+	Inputs
+	JavaScript
+
+	Scroll up and down and discover more of Goldflix
+
+	* Prototype only (Not actually working)
+
+		Search Bar
+		Movie Player
+		Account Name : Attitude Sam
+
+
+
+ | TECHNICALS
+
+	Recommended Browser: Microsoft Edge.
+
+	Coded and tested on 'Microsoft Edge' Browser. 
+	NOT yet tested on Google Chrome and Mozilla Firefox and other browsers.
+
+	Changing browser support may affect interfaces.
+
+
+	Sign in and Sign up 3 pages need specific inputs.
+	
+	See [SIGN IN & SIGN UP 3 INPUTS] text document.
+
+
+
+	Project assets are grouped based on "TYPE".
+	If NOT, Group the project assets based on "TYPE", For easy access.
+
+
+
+ | KNOWN BUGS
+
+	Resizing the browser may affect images, making them pixelated.
+
+		~ Try refreshing the website.
+
+
+	* Varying screen resolutions may warp interfaces.
+	
+		~ Zooming in / out the browser may fix the awkwardness of the websites.
+	
+	
+
+
+
+ | Thank you for reading and Enjoy Goldflix!
+
+
+
+
+
